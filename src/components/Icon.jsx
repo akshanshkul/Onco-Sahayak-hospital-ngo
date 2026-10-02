@@ -1,0 +1,63 @@
+import React from "react";
+import {
+  IconActivity,
+  IconArrowRight,
+  IconAmbulance,
+  IconBuildingHospital,
+  IconCalendarEvent,
+  IconCalendarTime,
+  IconChartBar,
+  IconClipboardList,
+  IconDashboard,
+  IconFileDescription,
+  IconHeartbeat,
+  IconLayoutGrid,
+  IconLogout,
+  IconMessageCircle,
+  IconNotes,
+  IconNurse,
+  IconPhone,
+  IconDots,
+  IconPlus,
+  IconCheck,
+  IconReportAnalytics,
+  IconSettings,
+  IconStethoscope,
+  IconUsers,
+  IconUsersGroup,
+} from "@tabler/icons-react";
+
+const icons = {
+  dashboard: IconDashboard,
+  patients: IconUsers,
+  appointments: IconCalendarTime,
+  doctors: IconStethoscope,
+  departments: IconBuildingHospital,
+  services: IconActivity,
+  events: IconCalendarEvent,
+  settings: IconSettings,
+  support: IconHeartbeat,
+  documents: IconFileDescription,
+  announcement: IconNotes,
+  users: IconUsersGroup,
+  feedback: IconMessageCircle,
+  analytics: IconChartBar,
+  hospital: IconBuildingHospital,
+  patientGroup: IconUsersGroup,
+  clipboard: IconClipboardList,
+  report: IconReportAnalytics,
+  notes: IconNotes,
+  nurse: IconNurse,
+  ambulance: IconAmbulance,
+  phone: IconPhone,
+  logout: IconLogout,
+  arrowRight: IconArrowRight,
+  dots: IconDots,
+  plus: IconPlus,
+  check: IconCheck,
+};
+
+export default function Icon({ name, size = 18, stroke = 1.8, ...props }) {
+  const Component = icons[name] || IconLayoutGrid;
+  return <Component size={size} stroke={stroke} aria-hidden="true" {...props} />;
+}
